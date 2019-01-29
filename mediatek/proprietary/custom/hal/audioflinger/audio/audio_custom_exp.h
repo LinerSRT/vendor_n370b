@@ -68,66 +68,32 @@
 /*****************************************************************
 ** refine volume
 *****************************************************************/
-#ifdef DEVICE_MAX_VOLUME
-#undef DEVICE_MAX_VOLUME
-#endif
-#define DEVICE_MAX_VOLUME       (8)
-#ifdef DEVICE_VOICE_MAX_VOLUME
-#undef DEVICE_VOICE_MAX_VOLUME
-#endif
-#define DEVICE_VOICE_MAX_VOLUME (8)
-#ifdef DEVICE_AMP_MAX_VOLUME
-#undef DEVICE_AMP_MAX_VOLUME
-#endif
+
+#define DEVICE_MAX_VOLUME       (12)
+#define DEVICE_VOICE_MAX_VOLUME (12)
 #define DEVICE_AMP_MAX_VOLUME   (15)
-#ifdef DEVICE_MIN_VOLUME
-#undef DEVICE_MIN_VOLUME
-#endif
-#define DEVICE_MIN_VOLUME       (-4)
-#ifdef DEVICE_VOICE_MIN_VOLUME
-#undef DEVICE_VOICE_MIN_VOLUME
-#endif
-#define DEVICE_VOICE_MIN_VOLUME (-4)
-#ifdef DEVICE_AMP_MIN_VOLUME
-#undef DEVICE_AMP_MIN_VOLUME
-#endif
+#define DEVICE_MIN_VOLUME       (-32)
+#define DEVICE_VOICE_MIN_VOLUME (-32)
 #define DEVICE_AMP_MIN_VOLUME   (6)
-#ifdef DEVICE_VOLUME_RANGE
-#undef DEVICE_VOLUME_RANGE
-#endif
 #define DEVICE_VOLUME_RANGE     (64)
-#ifdef DEVICE_VOLUME_STEP
-#undef DEVICE_VOLUME_STEP
-#endif
 #define DEVICE_VOLUME_STEP      (256)
 
 /******************************************************************
 ** define Vibration SPK Default Center Freq and RMS
 ******************************************************************/
-#ifdef VIBSPK_MV_RMS
-#undef VIBSPK_MV_RMS
-#endif
 #define VIBSPK_MV_RMS           (350) //280~560, 70 per step
-#ifdef VIBSPK_DEFAULT_FREQ
-#undef VIBSPK_DEFAULT_FREQ
-#endif
 #define VIBSPK_DEFAULT_FREQ     (156) //141~330 Hz
 
 /******************************************************************
 ** define using which flag
 ******************************************************************/
-#ifdef USING_CLASSD_AMP
-#undef USING_CLASSD_AMP
-#endif
 #define USING_CLASSD_AMP                // define using which flag
 //#define USING_CLASSAB_AMP
+#define USING_EXTAMP_HP
 
 /******************************************************************
 ** define chip delay for NXP
 ******************************************************************/
-#ifdef CHIP_DELAY
-#undef CHIP_DELAY
-#endif
 #define CHIP_DELAY				(22)
 
 /***************************************************
@@ -142,17 +108,14 @@ typedef enum
     AUDIO_MIC_MODE_DCCECMSINGLE = 6,
 } AUDIO_MIC_MODE;
 *****************************************************/
-#ifdef PHONE_MIC_MODE
-#undef PHONE_MIC_MODE
-#endif
+/* Vanzo:yangzhihong on: Wed, 24 Feb 2016 20:26:11 +0800
+ * TODO: replace this line with your comment
 #define PHONE_MIC_MODE (2)
-#ifdef HEADSET_MIC_MODE
-#undef HEADSET_MIC_MODE
-#endif
 #define HEADSET_MIC_MODE (6)
-#ifdef MAIN_REF_MIC_INVERSE
-#undef MAIN_REF_MIC_INVERSE
-#endif
 #define MAIN_REF_MIC_INVERSE 1
+ */
+#define PHONE_MIC_MODE (1)
+#define HEADSET_MIC_MODE (1)
+#define MAIN_REF_MIC_INVERSE 0
 #endif
 

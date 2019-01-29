@@ -1,2 +1,0 @@
-#define MET_BACKEND_VERSION "4.6.0-EBL-Spec"
-//#define MET_BACKEND_VERSION "6.0.1"

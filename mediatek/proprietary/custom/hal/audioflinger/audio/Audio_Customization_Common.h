@@ -41,38 +41,30 @@
 /****************************************************
 * Define Volume Range of  sound & Voice.
 *****************************************************/
-#ifdef DEVICE_VOLUME_RANGE
-#undef DEVICE_VOLUME_RANGE
-#endif
+
+
+
+#define DEVICE_MAX_VOLUME           (12)
+#define DEVICE_VOICE_MAX_VOLUME     (12)
+#define DEVICE_MIN_VOLUME           (-32)
+#define DEVICE_VOICE_MIN_VOLUME     (-32)
 #define DEVICE_VOLUME_RANGE     (64)
-#ifdef DEVICE_VOLUME_STEP
-#undef DEVICE_VOLUME_STEP
-#endif
 #define DEVICE_VOLUME_STEP (256)
 
 /***************************************************
 *adjust boot animation volume. the volume range is from 0 to 1.
 *****************************************************/
-#ifdef BOOT_ANIMATION_VOLUME
-#undef BOOT_ANIMATION_VOLUME
-#endif
 #define BOOT_ANIMATION_VOLUME       (0.25)
 
 /***************************************************
 *(1)->Use Ref Mic as main mic; (0)->Use original main mic.
 *****************************************************/
-#ifdef USE_REFMIC_IN_LOUDSPK
-#undef USE_REFMIC_IN_LOUDSPK
-#endif
 #define USE_REFMIC_IN_LOUDSPK       (0)
 
 /****************************************************
 * Define this will enable audio compensation filter for loudspeaker
 *Please see ACF Document for detail.
 *****************************************************/
-#ifdef ENABLE_AUDIO_COMPENSATION_FILTER
-#undef ENABLE_AUDIO_COMPENSATION_FILTER
-#endif
 #define ENABLE_AUDIO_COMPENSATION_FILTER
 
 
@@ -82,10 +74,7 @@
 * Define this will enable headphone compensation filter.
 *Please see HCF Document for detail.
 *****************************************************/
-//#define ENABLE_HEADPHONE_COMPENSATION_FILTER
-#ifdef HEADPHONE_COMPENSATION_FLT_MODE
-#undef HEADPHONE_COMPENSATION_FLT_MODE
-#endif
+#define ENABLE_HEADPHONE_COMPENSATION_FILTER
 #define HEADPHONE_COMPENSATION_FLT_MODE (4)
 
 
@@ -93,18 +82,12 @@
 *Define this will enable SW stereo to mono on LCH & RCH
 *If not define this, HW stereo to mono (only LCH) will be applied.
 *****************************************************/
-#ifdef ENABLE_AUDIO_SW_STEREO_TO_MONO
-#undef ENABLE_AUDIO_SW_STEREO_TO_MONO
-#endif
 #define ENABLE_AUDIO_SW_STEREO_TO_MONO
 
 
 /***************************************************
 *Define this will enable high samplerate record.
 *****************************************************/
-#ifdef ENABLE_HIGH_SAMPLERATE_RECORD
-#undef ENABLE_HIGH_SAMPLERATE_RECORD
-#endif
 #define ENABLE_HIGH_SAMPLERATE_RECORD
 
 
@@ -144,42 +127,24 @@
 *****************************************************/
 //#define ENABLE_CAMERA_SOUND_FORCED_SET
 
-#ifdef AUDIO_DROP_FRAME_COUNT_NORMAL
-#undef AUDIO_DROP_FRAME_COUNT_NORMAL
-#endif
 #define AUDIO_DROP_FRAME_COUNT_NORMAL 5
-#ifdef AUDIO_DROP_FRAME_COUNT_RECORD
-#undef AUDIO_DROP_FRAME_COUNT_RECORD
-#endif
 #define AUDIO_DROP_FRAME_COUNT_RECORD 5
-#ifdef AUDIO_DROP_FRAME_COUNT_CTS
-#undef AUDIO_DROP_FRAME_COUNT_CTS
-#endif
 #define AUDIO_DROP_FRAME_COUNT_CTS 5
 
 /***************************************************
 *(0)->copyright is asserted; (1)->no copyright is asserted.
 *****************************************************/
-#ifdef CHANNEL_STATUS_COPY_BIT
-#undef CHANNEL_STATUS_COPY_BIT
-#endif
 #define CHANNEL_STATUS_COPY_BIT (1)
 
 /***************************************************
 *Specify category code (1 byte).
 *****************************************************/
-#ifdef CHANNEL_STATUS_CATEGORY_CODE
-#undef CHANNEL_STATUS_CATEGORY_CODE
-#endif
 #define CHANNEL_STATUS_CATEGORY_CODE  (0x00)
 
 
 /****************************************************
 *Define this, HD Rec will use this for default param if no mode is set
 *****************************************************/
-#ifdef DEFAULT_HDRecordEnhanceParas
-#undef DEFAULT_HDRecordEnhanceParas
-#endif
 #define DEFAULT_HDRecordEnhanceParas \
 	0, 479, 16388, 36892, 37124, 8192,  768, 0,  4048, 2245, 611, 0, 0, 0, 0, 8192
 
@@ -190,15 +155,9 @@
 *bit 1 headset  DRC2.0  on=> bits 1 = 1
 *bit 2 speaker  DRC2.0  on=> bits 2 = 1
 *****************************************************/
-#ifdef MagiLoudness_TE_mode
-#undef MagiLoudness_TE_mode
-#endif
 #define MagiLoudness_TE_mode (0x0)
 
 
-#ifdef DEFAULT_HDRecordCompenFilter
-#undef DEFAULT_HDRecordCompenFilter
-#endif
 #define DEFAULT_HDRecordCompenFilter \
     32767,     0,     0,     0,     0,     0,     0,     0,     0,     0, \
         0,     0,     0,     0,     0,     0,     0,     0,     0,     0, \
