@@ -32,7 +32,6 @@ int DarkeningSpeedLevel = 13;
 // Larger value means stronger
 // Supports multiple LCM. The number of elements must equal to LCM_COUNT.
 int ReadabilityLevel[] = { 207 };
-int LowBLReadabilityLevel[] = { 207 };
 
 // Strength of Content-adaptive backlight control
 // In [0, 255]
